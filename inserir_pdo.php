@@ -8,8 +8,8 @@ $sql = "INSERT INTO cadastro
 VALUES (
 	'José da Silva',
 	'1980-02-01',
-	'jose.silva at email.com.br',
-	'https://jose.silva.sites.com.br',
+	'jose silva email com',
+	'https://sites.com.br',
 	2,
 	5000.90
 )";
