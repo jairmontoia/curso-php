@@ -1,0 +1,28 @@
+version: '3.1'
+
+networks:
+  php-net:
+
+services:
+  db:
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    volumes:
+      - ./dados:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: jair1234
+    networks:
+      - php-net    
+
+  app:
+    image: montoia/php:7.3-apache
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./:/var/www/html      
+    networks:
+      - php-net    
+
+# docker-compose up -d
