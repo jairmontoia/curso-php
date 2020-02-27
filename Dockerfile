@@ -1,5 +1,5 @@
 FROM php:7.3-apache
-LABEL maintainer 'Jair Montoia<jair montoia at gmail com>'
+LABEL maintainer 'Jair Montoia'
 
 RUN apt-get update && \
 	apt-get install -y locales && \
